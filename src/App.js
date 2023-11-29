@@ -1,5 +1,4 @@
 // import logo from './logo.svg';
-import './App.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {icon} from '@fortawesome/fontawesome-svg-core';
 import TodoInput from './Components/TodoInput';
