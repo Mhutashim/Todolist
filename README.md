@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Authors statement
+
+In the application i have used font awesome individually using Bootstrap dependencies via npm.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
