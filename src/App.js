@@ -59,6 +59,7 @@ export default class App extends Component {
       {
         items: editedItem,
         item: "",
+        id: uuid(),
         editItem: false,
       }
       // () => console.log(this.state)
@@ -71,10 +72,29 @@ export default class App extends Component {
     });
   };
   handleDelete = (id) => {
-    console.log(`delete item ${id}`);
+    // console.log(`delete item ${id}`);
+    const filteredItems = this.state.items.filter(
+      (singleitem) => singleitem.id !== id
+    );
+    this.setState({
+      items: filteredItems,
+    });
   };
   handleEdit = (id) => {
     console.log(`edit item ${id}`);
+
+    const filteredItems = this.state.items.filter(
+      (singleItem) => singleItem.id !== id
+    );
+    const selectedItem = this.state.items.find(
+      (singleItem) => singleItem.id === id
+    );
+    this.setState({
+      items: filteredItems,
+      item: selectedItem.title,
+      id: id,
+      editItem: true,
+    });
   };
 
   render() {

@@ -24,9 +24,14 @@ export default class TodoInput extends Component {
           <div className="d-grid gap-2">
             <button
               type="submit"
-              className="btn btn-primary mt-3 text-uppercase"
+              disabled={item ? false : true}
+              className={
+                editItem
+                  ? "btn btn-success mt-3 text-uppercase"
+                  : "btn btn-primary mt-3 text-uppercase"
+              }
             >
-              add item
+              {editItem ? "edit item" : "add item"}
             </button>
           </div>
         </form>
