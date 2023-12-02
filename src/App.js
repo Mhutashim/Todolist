@@ -65,7 +65,10 @@ export default class App extends Component {
     );
   };
   clearList = () => {
-    console.log("clear list");
+    // console.log("clear list");
+    this.setState({
+      items: [],
+    });
   };
   handleDelete = (id) => {
     console.log(`delete item ${id}`);
@@ -93,7 +96,7 @@ export default class App extends Component {
                 handleSubmit={this.handleSubmit}
                 editItem={this.state.editItem}
               ></TodoInput>
-              <h3 className="text-center text-capitalize">Todo List</h3>
+              {/* <h3 className="text-center text-capitalize">Todo List</h3> */}
               <TodoList
                 items={this.state.items}
                 clearList={this.clearList}
